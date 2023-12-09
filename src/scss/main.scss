@@ -1,0 +1,335 @@
+button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=search]{outline-offset:-2px}summary{display:list-item}[hidden],template{display:none}
+
+@font-face {
+  font-family: 'CeraPro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""),
+    url('../fonts/CeraPro-Regular.woff2') format('woff2'),
+    url('../fonts/CeraPro-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""),
+    url('../fonts/CeraPro-Bold.woff2') format('woff2'),
+    url('../fonts/CeraPro-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(""),
+    url('../fonts/CeraPro-Medium.woff2') format('woff2'),
+    url('../fonts/CeraPro-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local(""),
+    url('../fonts/CeraPro-Black.woff2') format('woff2'),
+    url('../fonts/CeraPro-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(""),
+    url('../fonts/CeraPro-Light.woff2') format('woff2'),
+    url('../fonts/CeraPro-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local(""),
+    url('../fonts/CeraPro-Thin.woff2') format('woff2'),
+    url('../fonts/CeraPro-Thin.woff') format('woff');
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+$white: #FFFFFF;
+$green: #46A358;
+
+body {
+  min-width: 320px;
+  font-family: 'CeraPro', sans-serif;
+  font-size: 16px;
+  color: #3D3D3D;
+  background: $white;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1260px;
+}
+
+.reset {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+/* header */
+
+.header {
+  margin-bottom: 12px;
+  padding-top: 25px;
+
+  &__container {
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.50);
+    padding-bottom: 17.7px;
+  }
+
+  &__margin-link:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__margin-link:first-child &__link {
+    border-bottom: 3px solid $green;
+    padding-bottom: 23px;
+    font-weight: 700;
+  }
+
+  &__cube {
+    align-items: center;
+  }
+
+  &__margin-icon:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__margin-icon:nth-child(2) {
+    margin-right: 35px;
+  }
+
+  &__icon {
+    position: relative;
+    span {
+      position: absolute;
+      left: 15px;
+      border: 2px solid $white;
+      border-radius: 50%;
+      padding: 0 3px;
+      font-size: 10px;
+      font-weight: 500;
+      color: $white;
+      background: $green;
+    }
+  }
+
+  &__btn {
+    border-radius: 6px;
+    padding: 8px 17px;
+    padding-left: 18px;
+    font-weight: 500;
+    color: $white;
+    background: $green;
+    svg {
+      margin-right: 6px;
+    }
+  }
+
+  &__logo:focus,
+  &__link:focus,
+  &__icon:focus,
+  &__btn:focus {
+    outline: none;
+  }
+}
+
+/* hero */
+
+.hero {
+  padding-bottom: 42px;
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slide {
+    padding-left: 43px;
+    background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
+  }
+
+  &__div {
+    margin-top: 66px;
+  }
+
+  &__subtext {
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #3D3D3D;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    margin-left: -3px;
+    max-width: 530px;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    span {
+      color: $green;
+    }
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    max-width: 557px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #727272;
+  }
+
+  &__link {
+    display: inline-block;
+    border-radius: 6px;
+    margin-left: -2px;
+    padding: 11px 26px;
+    padding-right: 28px;
+    padding-bottom: 9px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    background: $green;
+  }
+
+  &__pagination {
+    position: absolute;
+    z-index: 5;
+    bottom: 17px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link:focus,
+  &__pagination:focus {
+    outline: none;
+  }
+}
+
+/* product */
+
+.products {
+  padding-top: 23px;
+  padding-bottom: 47px;
+  
+  &__filter {
+    padding-top: 14px;
+    padding-left: 18px;
+  }
+
+  &__filter-subtitle {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+
+  &__cube {
+    margin-bottom: 30px;
+  }
+
+  &__margin-link:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  &__margin-link:first-child &__link {
+    border-bottom: 2px solid $green;
+    padding-bottom: 5px;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 700;
+    color: $green;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+  }
+
+  &__item {
+    box-sizing: border-box;
+  }
+
+  &__item:hover {
+    border-top: 1px solid $green;
+  }
+
+  &__subtitle {
+    margin-bottom: 6px;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 700;
+    color: $green;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+}
